@@ -1,12 +1,11 @@
-
-# Individual Project 3:
+# Extra Credit Project: 5 Points
 # Image Generation with GAN
 
 #### Due Date
-* Tuesday Apr 4, 2023 (23:59)
+* Tuesday Dec. 12, 2023 (23:59)
 
 #### Total Points 
-* 100 (One Hundred)
+* 5
 
 ## Goal
 In this assignment you will be asked to implement a Generative Adversarial Networks (GAN) with [MNIST data set](http://yann.lecun.com/exdb/mnist/). This project will be completed in Python 3 using [Pytorch](https://pytorch.org/tutorials/). 
@@ -134,83 +133,8 @@ plt.show()
 
 Please compress all the below files into a zipped file and submit the zip file (firstName_lastName_GAN.zip) to Canvas. 
 
-#### PDF Report
-* Set of Experiments Performed: Include a section describing the set of experiments that you performed, what structures you experimented with (i.e., number of layers, number of neurons in each layer), what hyperparameters you varied (e.g., number of epochs of training, batch size and any other parameter values, weight initialization schema, activation function), what kind of loss function you used and what kind of optimizer you used. 
-* Special skills: Include the skills which can improve the generation quality. Here are some [tips](https://github.com/soumith/ganhacks) may help.   
-* Visualization: Include 25 (5\*5) final generated images which formatted as the example in Goal and a loss plot of the generator and discriminator during your training. For generated images, you need to generated at least one image for each digit. 
-
 #### Python code
 * Include model creation, model training, plotting code.
 
 #### Generator Model
 * Turn in your best generator saved as “generator.pt” and the weights of your generator saved as “generator_weights.pt”.
-
-
-## Grading
-
-#### Report (70%)
-
-* Set of experiments performed: 30 points
-* Special skills: 20 points
-* Visualization: 20 points
-
-#### Code (20%) 
-
-You can get full credits if the scripts can run successfully (i.e., TA will test your code with a small data set to see if images can be generated), otherwise you may loss some points based on your error. Similar to project 2, you should submit a evaluation.py file.
-
-#### Model (10%)
-
-You can get full credits if all the generated images can be recognized, otherwise you may loss some points. Also, the code you submitted should be able to generate all 10 different digits.
-
-## Bonus (10 points)
-
-Generate images from other data source.
-
-* Data set
-
-  Here are some images you may interest. Note other data sets are also allowed.
-  
-  [Face](https://drive.google.com/drive/folders/0B7EVK8r0v71pTUZsaXdaSnZBZzg)
-  
-  [Dogs and Cats](https://www.kaggle.com/c/dogs-vs-cats/data)
-  
-  [Anime](https://drive.google.com/drive/folders/1mCsY5LEsgCnc0Txv0rpAUhKVPWVkbw5I)
-  
-* Package
-
-  You are allowed to use any deep learning package, such as Pytorch, etc.
-  
-* Deliverable
-
-  * Code
-  
-  * Model
-  
-  * README file (How to  compile and load the model to generate images)
-  
-  * 25 generated images
-
-## Tips of Using GPU on Turing Server
-
-* Set up environment on Turing server 
-    1. Connect to Turing server
-    2. Open remote folder (your own root folder on the server) 
-    3. Create a new terminal
-    4. Load anaconda3, CUDA and cudnn using “module load” command
-    5. Create new conda env using “conda create –n NAME”
-    6. Activate new env using “source activate NAME”
-    7. Install Pytorch using the command from this page: https://pytorch.org/get-started/locally/, based on your OS.
-
-* Submit job on Turing server
-   ```shell
-   #!/bin/bash
-   #SBATCH -N 1
-   #SBATCH -n 4
-   #SBATCH --gres=gpu:1
-
-   module load cuda92/toolkit
-   module load cudnn
-   python torch_test.py
-   ```
-
-# CS549ML
